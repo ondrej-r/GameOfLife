@@ -31,11 +31,11 @@ python3 -m venv .venv
 ```
 Aktivujte virtuální prostředí. Na Windows:
 ```
-venv\Scripts\activate
+.venv\Scripts\activate
 ```
 Na MacOS/Linux:
 ```
-source venv/bin/activate
+source .venv/bin/activate
 ```
 Naklonujte repository pomocí Gitu:
 ```
