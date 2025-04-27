@@ -7,11 +7,11 @@ import sys
 class Config:
     def __init__(self, test_args=None):
         """
-        Initializes Config class.
+        Initializes the Config class with optional command-line arguments.
 
         Parameters:
-            test_args (list, optional):
-                List of arguments to use with library pytest. Default is None.
+            test_args (list, optional): 
+                A list of arguments to be parsed by the library pytest. Default is None.
         """
         self.patterns = self._load_patterns()
         self.args = self._parse_args(test_args)
@@ -19,13 +19,14 @@ class Config:
 
     def _parse_args(self, args=None):
         """
-        Parses command line arguments.
+        Parses command-line arguments for the simulation.
 
         Parameters:
-            args (list, optional):
-                Adds list of availible arguments. Default is None.
+            args (list, optional): 
+                A list of arguments to parse.
+
         Returns:
-            Namespace: Parsed arguments namespace.
+            Namespace: Parsed arguments namespace containing flags and options.
         """
         parser = argparse.ArgumentParser(description="Conway's Game of Life")
         parser.add_argument("-t", "--terminal", "--tui", action="store_true")
@@ -50,7 +51,7 @@ class Config:
 
     def _init_values(self):
         """
-        Initializes configuration values from parsed arguments or defaults.
+        Initializes configuration values based on parsed arguments or defaults.
         """
         try:
             term_width, term_height = os.get_terminal_size()

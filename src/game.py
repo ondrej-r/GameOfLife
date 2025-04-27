@@ -11,8 +11,8 @@ import pygame  # noqa: E402 ignore due to setting enviroment variable
 class Game:
     def __init__(self, **config):
         """
-        Initializes Game class and grid.
-
+        Initializes the Game class with configuration parameters and sets up the game grid.
+        
         Parameters:
             **config:
                 Keyword arguments unpacked from a configuration dictionary.
@@ -26,7 +26,7 @@ class Game:
 
     def apply_pattern(self):
         """
-        Applies selected starting pattern to the grid.
+        Applies the selected pattern to the grid, accounting for rotation.
         """
         cells = self.patterns[self.pattern]
         if self.rotate == 90:
@@ -73,8 +73,7 @@ class Game:
 
     def apply_rules(self):
         """
-        Applies simulation rules to all cells and updates the grid to the next
-        step.
+        Applies simulation rules to all cells and updates the grid accordingly.
         """
         new_grid = np.zeros_like(self.grid)
         for row in range(self.height):
@@ -91,7 +90,7 @@ class Game:
 
     def print_tui(self):
         """
-        Prints the current grid state as text to the console.
+        Prints the current grid state in the terminal.
         """
         for row in range(self.height):
             for col in range(self.width):
@@ -106,7 +105,7 @@ class Game:
 
     def step_tui(self):
         """
-        Performs one step of text user interface simulation.
+        Performs one step of simulation in the terminal.
         """
         self.print_tui()
         self.get_neighbors()
@@ -114,7 +113,7 @@ class Game:
 
     def run_tui(self):
         """
-        Runs the simulation in the console.
+        Runs the simulation in the terminal.
         """
         if self.steps is not None:
             for _ in range(self.steps):
@@ -127,7 +126,7 @@ class Game:
 
     def setup_gui(self):
         """
-        Setups graphical user interface using PyGame.
+        Sets up the graphical user interface using PyGame.
         """
         self.cell_size = 20
         pygame.init()
@@ -137,7 +136,7 @@ class Game:
 
     def draw_gui(self):
         """
-        Draws the current state of the grid in a window.
+        Draws the current state of the grid to the graphical window.
         """
         self.screen.fill((0, 0, 0))
         for y in range(self.height):
@@ -152,7 +151,7 @@ class Game:
 
     def step_gui(self):
         """
-        Performs one step of graphical user interface simulation.
+        Performs one step of simulation in the graphical window.
         """
         self.get_neighbors()
         self.apply_rules()
@@ -160,7 +159,7 @@ class Game:
 
     def run_gui(self):
         """
-        Runs the simulation in a graphical PyGame window.
+        Runs the simulation in the graphical window.
         """
         self.setup_gui()
         step_counter = 0
@@ -178,6 +177,7 @@ class Game:
 
     def main(self):
         """
+        Main entry point for the simulation.
         Switches between text and graphical version of the simulation.
         """
         if self.graphical:
