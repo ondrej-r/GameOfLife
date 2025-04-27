@@ -56,4 +56,4 @@ Pro spuštění grafické verze s využitím PyGame:
 python game_of_life.py -g
 ```
 
-Podrobnější dokumentace je k nalezení [zde]().
+Podrobnější dokumentace je k nalezení [zde](https://github.com/ondrej-r/GameOfLife/wiki).
