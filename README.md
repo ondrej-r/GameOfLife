@@ -49,11 +49,11 @@ Nainstalujte požadované dependencies pomocí pip:
 
 Pro spuštění textové verze hry v terminálu:
 ```
-python main.py
+python src/main.py
 ```
 Pro spuštění grafické verze s využitím PyGame:
 ```
-python main.py -g
+python src/main.py -g
 ```
 
 Podrobnější dokumentace je k nalezení [zde](https://github.com/ondrej-r/GameOfLife/wiki).
