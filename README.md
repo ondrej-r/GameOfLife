@@ -15,7 +15,11 @@ Projekt obsahuje textovou verzi hry spustitelnou v terminálu a grafickou verzi 
 
 Ujistěte se, že máte nainstalovaný Python na vašem počítači. Pokud ho nemáte, nainstalujte Python z [oficiální stránky](https://www.python.org/downloads/).
 
-Dalším krokem je vytvoření a aktivace virtuálního prostředí. Pokud nemáte virtuální prostředí nainstalované, použijte:
+Dalším krokem je vytvoření a aktivace virtuálního prostředí.
+```
+cd /cesta/k/vašemu/projektu
+```
+Pokud nemáte virtuální prostředí nainstalované, použijte následující příkaz pro instalaci:
 ```
 pip install virtualenv
 ```
