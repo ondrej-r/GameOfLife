@@ -17,6 +17,5 @@ jobs:
     - name: Install dependencies
       run: pip install flake8
 
-    - name: Check code style with Flake8
-      run: |
-        flake8 game_of_life.py
+    - name: Check code with Flake8
+      run: flake8 src/
