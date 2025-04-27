@@ -10,8 +10,9 @@ class Config:
         Initializes the Config class with optional command-line arguments.
 
         Parameters:
-            test_args (list, optional): 
-                A list of arguments to be parsed by the library pytest. Default is None.
+            test_args (list, optional):
+                A list of arguments to be parsed by the library pytest.
+                Default is None.
         """
         self.patterns = self._load_patterns()
         self.args = self._parse_args(test_args)
@@ -22,7 +23,7 @@ class Config:
         Parses command-line arguments for the simulation.
 
         Parameters:
-            args (list, optional): 
+            args (list, optional):
                 A list of arguments to parse.
 
         Returns:

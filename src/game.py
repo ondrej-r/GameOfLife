@@ -11,8 +11,9 @@ import pygame  # noqa: E402 ignore due to setting enviroment variable
 class Game:
     def __init__(self, **config):
         """
-        Initializes the Game class with configuration parameters and sets up the game grid.
-        
+        Initializes the Game class with configuration parameters
+          and sets up the game grid.
+
         Parameters:
             **config:
                 Keyword arguments unpacked from a configuration dictionary.
